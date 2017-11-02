@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Repository;
+using SimpleNet.Standard.Data;
+using SimpleNet.Standard.Data.SqlServer;
 
 namespace Web
 {
@@ -22,7 +25,12 @@ namespace Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var CONNECTION_STRING = Configuration.GetConnectionString("defaultConnection");
+
+            services.AddSingleton<ISimpleDatabaseProvider>( new SqlServerProvider(CONNECTION_STRING) );
+
             services.AddMvc();
+            services.AddRepositories();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

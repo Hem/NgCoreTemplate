@@ -14,7 +14,13 @@
   <ItemGroup>
     <PackageReference Include="SimpleNet.Standard.Data" Version="1.0.0" />
     <PackageReference Include="SimpleNet.Standard.Data.SqlServer" Version="1.0.0" />
-  </ItemGroup>  
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\Repository.Contracts\Repository.Contracts.csproj" />
+    <ProjectReference Include="..\Repository\Repository.csproj" />
+  </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />

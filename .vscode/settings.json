@@ -2,6 +2,29 @@
   "files.exclude": {
     "**/node_modules": true,
     "**/bin": true,
-    "**/obj": true
+    "**/obj": true,
+    ".vs": true
+  },
+  "msbuildProjectTools": {
+    "logging": {
+      "level": "Information",
+      "seq": {},
+      "file": "",
+      "trace": false
+    },
+    "language": {
+      "enable": true,
+      "disableFeature": {},
+      "useClassicProvider": false,
+      "disable": {
+        "hover": false
+      }
+    },
+    "nuget": {
+      "newestVersionsFirst": true,
+      "includePreRelease": true,
+      "disablePrefetch": false
+    },
+    "schemaVersion": 1
   }
 }

@@ -20,7 +20,12 @@ namespace Repository
 
         public Task<IEnumerable<User>> Find(FindParam filter)
         {
-            throw new System.NotImplementedException();
+            IEnumerable<User> users = new [] {
+                new User { Id = 0, FirstName = "Hem", LastName = "Talreja" },
+                new User { Id = 1, FirstName = "Jeff", LastName = "Stansberry" }
+            };
+            
+            return Task.FromResult(users);
         }
 
         public Task<User> GetById(int id)
