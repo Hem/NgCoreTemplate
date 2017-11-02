@@ -15,7 +15,12 @@ export class UserService {
 
     async getUsers(): Promise<User[]> {
         const resp = await this.http.get(`${this.baseUrl}api/admin/user/find`).toPromise();
-        return await resp.json() as User[];
+        return resp.json() as User[];
     }
+
+    async getUser(id:number) : Promise<User> {
+        const resp = await this.http.get(`${this.baseUrl}api/admin/user/{id}`).toPromise();
+        return resp.json() as User;
+    } 
 
 }
