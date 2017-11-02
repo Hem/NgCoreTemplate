@@ -3,7 +3,10 @@
     "**/node_modules": true,
     "**/bin": true,
     "**/obj": true,
-    ".vs": true
+    ".vs": true,
+    ".gitattributes": true,
+    ".gitignore": true,
+    "NgCoreTemplate.sln": true
   },
   "msbuildProjectTools": {
     "logging": {

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
     providers: [UserService],
 })
 export class UserListComponent {
-    private users:User[];
+    public users:User[];
 
     constructor(private userService:UserService) {}
 

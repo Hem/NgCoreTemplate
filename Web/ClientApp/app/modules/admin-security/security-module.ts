@@ -2,6 +2,7 @@ import { UserService } from './users/user-service';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { UserListComponent } from './users/user-list.component';
+import { GroupListComponent } from './groups/group-list.component';
 import { NgModule } from "@angular/core";
 
 /**
@@ -15,7 +16,8 @@ import { NgModule } from "@angular/core";
 @NgModule({
     providers: [ UserService ],
     declarations: [
-        UserListComponent
+        UserListComponent,
+        GroupListComponent
     ],
     imports: [
         CommonModule,
