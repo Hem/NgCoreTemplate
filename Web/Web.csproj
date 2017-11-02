@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="SimpleNet.Standard.Data" Version="1.0.0"/>
-    <PackageReference Include="SimpleNet.Standard.Data.SqlServer" Version="1.0.0"/>
+    <PackageReference Include="SimpleNet.Standard.Data" Version="1.0.0" />
+    <PackageReference Include="SimpleNet.Standard.Data.SqlServer" Version="1.0.0" />
   </ItemGroup>  
 
   <ItemGroup>
@@ -23,6 +23,18 @@
   <ItemGroup>
     <!-- Files not to publish (note that the 'dist' subfolders are re-added below) -->
     <Content Remove="ClientApp\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\app\modules\admin-security\users\user-service.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Repository.Contracts\Repository.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\modules\admin-security\users\user-service.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

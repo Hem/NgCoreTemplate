@@ -7,9 +7,9 @@ namespace Repository
     {
         public override ISimpleDataAccessLayer Database { get; set; }
 
-        public BaseRepository(ISimpleDataAccessLayer database) 
+        public BaseRepository(ISimpleDatabaseProvider db) 
         {
-            Database = database;               
+            Database = new SimpleDataAccessLayer(db);
         }
                         
     }

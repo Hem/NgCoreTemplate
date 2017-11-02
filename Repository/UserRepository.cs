@@ -9,7 +9,7 @@ namespace Repository
 {
     public class UserRepository : BaseRepository, IUserRepository
     {
-        public UserRepository(ISimpleDataAccessLayer database) : base(database)
+        public UserRepository(ISimpleDatabaseProvider db) : base(db)
         {
         }
 
